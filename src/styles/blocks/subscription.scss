@@ -1,0 +1,109 @@
+.subscribtion {
+  margin-top: 100px;
+
+  width: 100%;
+
+  background: url(../images/subscribe/subscribe-bg--mobile.png);
+  background-size: cover;
+  background-position: center;
+
+  @include page-inline-padding;
+  @include page-grid;
+
+  @include tablet {
+    margin-top: 92px;
+
+    background: url(../images/subscribe/subscribe-bg--tablet.png);
+  }
+
+  @include desktop {
+    margin-top: 200px;
+
+    background: url(../images/subscribe/subscribe-bg.png);
+  }
+
+  &__content {
+    padding-block: 88px;
+
+    grid-column: 1 / -1;
+
+    @include tablet {
+      grid-column: 2 / 6;
+      padding-block: 82px;
+    }
+
+    @include desktop {
+      grid-column: 4 / 10;
+      padding-block: 163px;
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+
+    color: #fff;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin: 20px 0 50px;
+
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+
+    @include tablet {
+      margin: 16px 0 64px;
+
+      line-height: 100%;
+    }
+
+    @include desktop {
+      margin: 16px 0 72px;
+    }
+  }
+
+  &__email {
+    display: flex;
+
+    &__input {
+      outline: none;
+      padding-left: 24px;
+
+      width: 100%;
+      height: 50px;
+
+      &::placeholder {
+        font-family: Montserrat, sans-serif;
+        color: #687480;
+        font-size: 14px;
+      }
+
+      @include tablet {
+        height: 70px;
+      }
+    }
+
+    @include tablet {
+      gap: 16px;
+    }
+
+    @include desktop {
+      gap: 30px;
+    }
+  }
+
+  &__button__arrow {
+    background-color: #f14a27;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+  }
+}

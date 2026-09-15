@@ -1,0 +1,33 @@
+.page {
+  font-family: 'IBM Plex Sans', sans-serif;
+  scroll-behavior: smooth;
+
+  &__body {
+    background: $c-gray;
+  }
+
+  &__menu {
+    padding: 24px 0 27px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #1a5a4c;
+
+    transition: all 0.5s;
+    transform: translateY(-100%);
+
+    &:target {
+      transform: translateY(0);
+    }
+
+    @include tablet {
+      padding-block: 40px;
+    }
+
+    @include desktop {
+      padding: 40px 0 48px;
+    }
+  }
+}

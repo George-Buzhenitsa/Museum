@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  color: #0f0e08;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+
+  @include tablet {
+    text-align: left;
+    font-size: 48px;
+  }
+}

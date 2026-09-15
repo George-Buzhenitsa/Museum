@@ -1,0 +1,146 @@
+.actuall__events {
+  margin-top: 70px;
+
+  @include tablet {
+    margin-top: 88px;
+  }
+
+  @include desktop {
+    margin-top: 200px;
+  }
+
+  &__content {
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include tablet {
+      margin-top: 48px;
+      gap: 64px;
+    }
+
+    @include desktop {
+      margin-top: 56px;
+      gap: 104px;
+    }
+  }
+
+  &__event {
+    @include page-grid;
+  }
+
+  &__picture {
+    width: 100%;
+    max-height: 210px;
+    grid-column: 1 / -1;
+
+    @include tablet {
+      max-height: 520px;
+    }
+
+    @include desktop {
+      grid-column: 1 / 8;
+    }
+
+    @include on-hover;
+  }
+
+  &__info {
+    margin-top: 20px;
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include tablet {
+      margin-top: 44px;
+      grid-column: 1 / 5;
+      gap: 0;
+    }
+
+    @include desktop {
+      margin-top: 0;
+      grid-column: 9 / -1;
+
+      align-self: center;
+    }
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & p {
+      font-size: 16px;
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+
+    & p:first-child {
+      color: #687480;
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    & p:last-child {
+      color: #1a5a4c;
+      font-weight: 700;
+      line-height: 150%;
+    }
+
+    @include tablet {
+      justify-content: left;
+      gap: 20px;
+    }
+
+    @include desktop {
+      gap: 24px;
+    }
+  }
+
+  &__name {
+    position: relative;
+
+    width: fit-content;
+    font-family: Montserrat, sans-serif;
+    color: #0f0e08;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 42%;
+      left: calc(100% + 10px);
+
+      width: 10px;
+      height: 10px;
+      background-color: #f14a27;
+
+      @include tablet {
+        width: 15px;
+        height: 15px;
+        left: calc(100% + 24px);
+      }
+    }
+
+    @include tablet {
+      margin: 30px 0 15px;
+      font-size: 36px;
+    }
+  }
+
+  &__description {
+    color: #4e4e4e;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
+  }
+}

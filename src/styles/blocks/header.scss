@@ -1,0 +1,146 @@
+.header {
+  &__content {
+    position: relative;
+
+    @include page-grid;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    height: 300px;
+    background-image: url(../images/header-bg-mobile.png);
+    background-position: center;
+    background-size: cover;
+
+    @include tablet {
+      left: 52%;
+      height: 384px;
+      background-image: url(../images/header-bg.png);
+    }
+
+    @include desktop {
+      left: 43.6%;
+      height: 655px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    @include tablet {
+      font-size: 36px;
+      top: 15px;
+      left: 19%;
+      transform: translateX(0);
+    }
+
+    @include desktop {
+      left: 7%;
+    }
+  }
+
+  &__top {
+    position: relative;
+    z-index: 0;
+    grid-column: 1 / -1;
+
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+
+    @include tablet {
+      grid-row: 1;
+      height: 384px;
+    }
+
+    @include desktop {
+      grid-row: 1;
+      height: 655px;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 1;
+
+    grid-column: 1 / -1;
+    align-self: end;
+
+    @include tablet {
+      grid-row: 1;
+      grid-column: 1 / 4;
+    }
+
+    @include desktop {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__title {
+    margin-block: 20px;
+
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 100%;
+
+    @include tablet {
+      margin-block: 0;
+
+      text-align: left;
+      font-size: 54px;
+      line-height: 120%;
+    }
+
+    @include desktop {
+      font-size: 72px;
+    }
+  }
+
+  &__tickets {
+    display: flex;
+    width: 100%;
+
+    @include tablet {
+      margin: 38px 0 20px;
+    }
+
+    @include desktop {
+      margin: 89px 0 118px;
+      justify-content: end;
+    }
+  }
+
+  &__tickets__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50px;
+    border: 1px solid #1a5a4c;
+
+    color: #0f0e08;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+
+    @include tablet {
+      max-width: 200px;
+      height: 70px;
+    }
+  }
+
+  &__button__arrow {
+    background-color: #1a5a4c;
+  }
+}

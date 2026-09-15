@@ -1,0 +1,40 @@
+.icon {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  background-position: center;
+  background-size: cover;
+
+  &--burger--menu {
+    margin-top: 27px;
+    background-image: url(../images/icons/burger-menu-icon.png);
+
+    @include tablet {
+      margin-top: 39px;
+    }
+  }
+
+  &--arrow {
+    background-image: url(../images/icons/arrow_icon.png);
+  }
+
+  &--close {
+    background-image: url(../images/icons/close-icon.png);
+  }
+
+  &--instagram {
+    background-image: url(../images/icons/instagram_icon.png);
+  }
+
+  &--facebook {
+    background-image: url(../images/icons/facebook_icon.png);
+  }
+
+  &--arrow-up {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/arrow_up_icon.png);
+  }
+}

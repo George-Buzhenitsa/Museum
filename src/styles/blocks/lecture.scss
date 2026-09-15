@@ -1,0 +1,112 @@
+.lecture {
+  @include page-inline-padding;
+  @include page-grid;
+
+  position: relative;
+  margin-top: 60px;
+
+  min-height: 210px;
+
+  background-image: url(../images/lecture/lecture-bg.png);
+  background-position: center;
+  background-size: cover;
+
+  @include tablet {
+    margin-top: 112px;
+    margin-inline: 34px;
+    padding-inline: 0;
+
+    min-height: 390px;
+  }
+
+  @include desktop {
+    margin-top: 104px;
+    margin-inline: 0;
+
+    @include page-inline-padding;
+
+    min-height: 550px;
+  }
+
+  &__info {
+    padding-block: 20px;
+    position: relative;
+    top: 153px;
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 #1a5a4c40;
+
+    @include tablet {
+      padding: 45px 55px 50px;
+
+      justify-self: center;
+      gap: 16px;
+
+      top: 306px;
+      width: 570px;
+      height: 204px;
+    }
+
+    @include desktop {
+      width: 100%;
+      height: fit-content;
+
+      padding-inline: 100px;
+      grid-column: 4 / 10;
+      justify-self: end;
+      top: 448px;
+    }
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    & p {
+      font-size: 16px;
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+
+    & p:first-child {
+      color: #687480;
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    & p:last-child {
+      color: #1a5a4c;
+      font-weight: 700;
+      line-height: 150%;
+    }
+
+    @include tablet {
+      justify-content: left;
+      gap: 192px;
+    }
+
+    @include desktop {
+      gap: 148px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 36px;
+    }
+  }
+}

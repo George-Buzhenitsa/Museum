@@ -14,6 +14,8 @@
     @include tablet {
       margin-top: 39px;
     }
+
+    @include on-hover;
   }
 
   &--arrow {
@@ -22,14 +24,20 @@
 
   &--close {
     background-image: url(../images/icons/close-icon.png);
+
+    @include on-hover;
   }
 
   &--instagram {
     background-image: url(../images/icons/instagram_icon.png);
+
+    @include on-hover;
   }
 
   &--facebook {
     background-image: url(../images/icons/facebook_icon.png);
+
+    @include on-hover;
   }
 
   &--arrow-up {

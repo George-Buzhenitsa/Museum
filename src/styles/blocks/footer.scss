@@ -72,12 +72,6 @@
       line-height: 141%;
     }
 
-    &__description {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 150%;
-    }
-
     @include tablet {
       margin-top: 0;
       grid-column: 4 / 6;
@@ -86,7 +80,20 @@
     @include desktop {
       grid-column: 5 / 7;
     }
+
+    &__description :nth-child(2n) {
+      display: block;
+    }
+
+    &__link {
+      color: #0F0E08;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+    }
   }
+
+
 
   &__nav {
     position: relative;

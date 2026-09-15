@@ -1,6 +1,10 @@
 .nav {
   display: flex;
 
+  &__item {
+    @include on-hover;
+  }
+
   &__link {
     line-height: 100%;
   }

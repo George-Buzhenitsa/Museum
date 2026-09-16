@@ -6,7 +6,7 @@ const navDots = document.querySelectorAll('.gallery__navigation');
 
 let activeDot = 0;
 const picuresGap = getComputedStyle(pictures);
-const pictureWidth = picture.clientWidth + (parseInt(picuresGap.gap));
+const pictureWidth = picture.clientWidth + parseInt(picuresGap.gap);
 
 navDots.forEach((dot) =>
   dot.addEventListener('click', (event) => {
@@ -41,3 +41,19 @@ navDots.forEach((dot) =>
     }
   }),
 );
+
+
+const page = document.querySelector('.page__body');
+const page_gradient = document.querySelector('.page__gradient');
+
+window.addEventListener('hashchange', () => {
+  setTimeout(() => {
+    if (window.location.hash === '#menu') {
+      page.classList.add('page__disabled');
+      page_gradient.style.display = 'block';
+    } else {
+      page.classList.remove('page__disabled');
+      page_gradient.style.display = 'none';
+    }
+  }, 0);
+});

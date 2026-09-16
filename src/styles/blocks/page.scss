@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 200;
     background-color: #1a5a4c;
 
     transition: all 0.5s;
@@ -29,5 +29,18 @@
     @include desktop {
       padding: 40px 0 48px;
     }
+  }
+
+  &__gradient {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    background-color: rgba(0,0,0, 0.4);
+  }
+
+  &__disabled {
+    overflow: hidden;
   }
 }
